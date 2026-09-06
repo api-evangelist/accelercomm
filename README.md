@@ -64,5 +64,25 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Accelercomm is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/accelercomm
+AccelerComm Limited is a British semiconductor and wireless physical-layer IP company at Southampton
+Science Park, spun out of the University of Southampton in 2016. It licenses channel-coding (forward
+error correction) IP — LDPC and Polar encoders/decoders, CRC acceleration, rate matching, soft-decision
+demodulation, channel estimation and equalisation — as RTL/FPGA cores and optimised software libraries
+for 5G NR and 4G LTE baseband, plus LEOphy, a Split-6 RU High-PHY layer 1 modem for low-earth-orbit 5G
+Non-Terrestrial Network satellite payloads.
+
+**No public API surface.** AccelerComm's products are integrated over hardware interfaces (AXI), not over
+a network. It publishes no developer portal, API reference, SDK or machine-readable contract; its own
+`/llms.txt` enumerates the whole site with no developer section, `api.`/`docs.`/`developer.accelercomm.com`
+do not resolve, its GitHub organisation has zero public repositories, and no package exists on npm, PyPI,
+RubyGems or crates.io. See `x-coverage` in `apis.yml` for the probe evidence.
+
+What this profile does hold:
+
+- `llms/accelercomm-llms.txt` — the company's own `/llms.txt`, saved verbatim (HTTP 200)
+- `well-known/accelercomm-well-known.yml` — the `/.well-known/` probe across every known host (no hits)
+- `security/accelercomm-domain-security.yml` — TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture
+
+- https://www.accelercomm.com/
+- https://github.com/AccelerComm
+- https://equityzen.com/company/accelercomm (secondary-market listing that surfaced this company)

@@ -1,0 +1,41 @@
+---
+generated: '2026-09-06'
+method: searched
+source: https://www.accelercomm.com/llms.txt
+note: Verbatim llms.txt published by AccelerComm at the root of www.accelercomm.com (HTTP 200,
+  text/plain). It is the only machine-readable document the company serves; every HTML page on
+  the site sits behind a Cloudflare managed challenge. The 'Attribution to Evolve' line is the
+  publisher's own text, left verbatim.
+---
+# llms.txt for accelercomm.com
+
+site: https://www.accelercomm.com/
+name: AccelerComm
+description: AccelerComm is a leading provider of high-performance, error-resilient physical layer solutions for 5G Non Terrestrial Networks (NTN). Experts in specialist Radio Access Networks (RAN) applications, we deliver solutions with cutting-edge performance and power efficiency, utilising next generation compute platforms.
+
+sitemap: https://www.accelercomm.com/sitemap.xml
+
+contact: info@accelercomm.com
+owner: AccelerComm
+
+license: All rights reserved. Content may be used for summarisation, Q&A, and reference. Training or commercial redistribution requires explicit permission.
+attribution: required
+
+llm-usage:  
+  - Allowed: summarisation, Q&A, content discovery.  
+  - Not allowed: training or commercial redistribution without permission.  
+  - Attribution to Evolve must be included when content is referenced.  
+
+update-frequency: weekly
+
+preferred-content:  
+  - https://www.accelercomm.com/
+  - https://www.accelercomm.com/solutions
+  - https://www.accelercomm.com/markets
+  - https://www.accelercomm.com/insights
+  - https://www.accelercomm.com/resources
+  - https://www.accelercomm.com/about-us
+  - https://www.accelercomm.com/careers
+  - https://www.accelercomm.com/contact
+  
+	

@@ -1,17 +1,59 @@
 aid: accelercomm
-name: Accelercomm
-description: 'Accelercomm is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: AccelerComm
+description: 'AccelerComm Limited is a British semiconductor and wireless physical-layer IP
+  company headquartered at Southampton Science Park, spun out of the University of Southampton
+  in 2016 by Professor Rob Maunder. It designs and licenses channel-coding (forward error
+  correction) intellectual property — LDPC and Polar encoders/decoders, CRC acceleration,
+  rate matching, soft-decision demodulation, channel estimation and equalisation — delivered
+  as RTL/FPGA IP cores, optimised software libraries and hardware-acceleration architectures
+  for 5G NR and 4G LTE baseband. Its LEOphy product is a complete Split-6 RU High-PHY layer 1
+  modem for low-earth-orbit 5G Non-Terrestrial Network satellite payloads, and the company was
+  selected for the Airbus UpNext SpaceRAN software-defined-satellite demonstrator. AccelerComm
+  raised £21.5m in growth funding, counts IP Group among its investors, and holds more than 56
+  granted international patents. Its products are integrated by silicon and RAN vendors over
+  hardware interfaces such as AXI rather than over the network: AccelerComm publishes no public
+  API, developer portal, SDK or machine-readable contract, and its GitHub organisation carries
+  no public repositories. The one machine-readable document it does serve is an /llms.txt at the
+  root of its marketing site.'
+image: https://avatars.githubusercontent.com/u/26278252?v=4
 url: https://raw.githubusercontent.com/api-evangelist/accelercomm/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
-specificationVersion: '0.20'
+x-tier: profile
+x-tier-reason: no-api-surface
+specificationVersion: '0.23'
 created: '2026-09-06'
 modified: '2026-09-06'
 tags:
 - Company
+- Semiconductors
+- Semiconductor IP
+- Telecommunications
+- Wireless
+- 5G
+- Non-Terrestrial Networks
+- Satellite Communications
+- Channel Coding
+- Forward Error Correction
+- Physical Layer
+- Radio Access Networks
+- FPGA
+- United Kingdom
+tags_raw:
+- Company
+- Semiconductors
+- Semiconductor IP
+- Telecommunications
+- Wireless
+- 5G
+- Non-Terrestrial Networks
+- Satellite Communications
+- Channel Coding
+- Forward Error Correction
+- Physical Layer
+- Radio Access Networks
+- FPGA
+- United Kingdom
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +61,57 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/accelercomm-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/accelercomm
+  url: https://www.accelercomm.com/
+- type: Solutions
+  url: https://www.accelercomm.com/solutions
+- type: UseCases
+  url: https://www.accelercomm.com/markets
+- type: Blog
+  url: https://www.accelercomm.com/insights
+- type: About
+  url: https://www.accelercomm.com/about-us
+- type: Careers
+  url: https://www.accelercomm.com/careers
+- type: Contact
+  url: https://www.accelercomm.com/contact
+- type: GitHubOrganization
+  url: https://github.com/AccelerComm
+- type: LLMsTxt
+  url: llms/accelercomm-llms.txt
+x-enrichment:
+  date: '2026-09-06'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    AccelerComm licenses 5G physical-layer silicon IP — LDPC/Polar channel-coding cores and the
+    LEOphy NTN High-PHY modem — which customers integrate over AXI hardware interfaces rather
+    than over a network, and the company's own /llms.txt enumerates its entire site (solutions,
+    markets, insights, resources, about-us, careers, contact) with no developer, API or docs
+    entry; api./docs./developer.accelercomm.com do not resolve, its GitHub organisation carries
+    zero public repositories, and no package exists on npm, PyPI, RubyGems or crates.io. Every
+    HTML page on www.accelercomm.com sits behind a Cloudflare managed challenge, so the finding
+    rests on the machine-readable and third-party surfaces listed below rather than on the
+    marketing pages.
+  evidence:
+  - url: https://www.accelercomm.com/llms.txt
+    status: 200
+  - url: https://www.accelercomm.com/openapi.json
+    status: 403
+  - url: https://www.accelercomm.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.accelercomm.com/.well-known/api-catalog
+    status: 404
+  - url: https://api.github.com/orgs/accelercomm
+    status: 200
+  - url: https://pypi.org/pypi/accelercomm/json
+    status: 404
+  - url: https://api.accelercomm.com/
+    status: 0
+  checked: '2026-09-06'

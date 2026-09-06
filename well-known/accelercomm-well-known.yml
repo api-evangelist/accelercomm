@@ -1,0 +1,128 @@
+generated: '2026-09-06'
+method: probed
+source: live probe of every host the record knows (www + apex accelercomm.com, plus the
+  hubspot./info./link. subdomains found in Certificate Transparency logs)
+note: >-
+  No /.well-known/ document is served on any AccelerComm host. On www.accelercomm.com every
+  /.well-known/* path returns an origin 404 carrying the site's ordinary HTML 404 page — the
+  Cloudflare managed challenge that 403s every other page on the site does not fire on this
+  prefix, so these are genuine origin misses rather than a blocked probe. The apex 301s to www.
+  A negative-control path that cannot exist returns the same 404, so this host does not echo
+  paths and there is no false-positive risk. NO WellKnown or SecurityTxt pointer is emitted,
+  because nothing was served. The only machine-readable document AccelerComm publishes is
+  /llms.txt (HTTP 200), captured separately at llms/accelercomm-llms.txt.
+hit_count: 0
+path_echo_control: passed
+soft_404_control:
+  path: /.well-known/accelercomm-negative-control-7f3ab91c.json
+  status: 404
+  bytes: 42543
+hosts:
+- host: https://www.accelercomm.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /apis.json
+    status: 403
+  - path: /apis.yml
+    status: 403
+  - path: /llms.txt
+    status: 200
+    file: ../llms/accelercomm-llms.txt
+- host: https://accelercomm.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/oauth-protected-resource
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+  - path: /.well-known/agent-card.json
+    status: 301
+  - path: /.well-known/agent.json
+    status: 301
+  - path: /.well-known/apis.json
+    status: 301
+  - path: /.well-known/aauth-resource.json
+    status: 301
+  - path: /apis.json
+    status: 403
+- host: https://hubspot.accelercomm.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://info.accelercomm.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/agent-card.json
+    status: 301
+  - path: /.well-known/agent.json
+    status: 301
+  - path: /.well-known/apis.json
+    status: 301
+  - path: /llms.txt
+    status: 301
+- host: https://link.accelercomm.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://it-support.accelercomm.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    note: host does not resolve to a reachable HTTPS service
